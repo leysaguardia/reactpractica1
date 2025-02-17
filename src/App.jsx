@@ -5,6 +5,11 @@ import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
 import ItemCount from './components/ItemCount'
 import React from 'react'
+import { BrowserRouter, Routes,Route } from 'react-router-dom'
+
+
+
+
 
 function App() { 
  
@@ -16,18 +21,22 @@ const agregarAlCarrito = (count) => {
 
   return (
       
-    <div >
+    <BrowserRouter>
 
        <NavBar/>
 
+        <Routes>
+          <Route path="/" element= {<ItemListContainer  saludo= {"Mermeladas naturales, libres de aditivos e ingredientes artificiales"} />}/>
+
+
        <h1 className='titulo'>{}</h1>
 
-      <ItemListContainer  saludo= {"Mermeladas naturales, libres de aditivos e ingredientes artificiales"} />
-  
+      
       <ItemCount stock={5} agregarAlCarrito={agregarAlCarrito} />
-
           <Titulo />
-    </div>
+
+          </Routes>
+    </BrowserRouter>
   )
 }
 
