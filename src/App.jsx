@@ -29,11 +29,7 @@ const agregarAlCarrito = (count) => {
           <Route path="/" element= {<ItemListContainer  saludo= {"Mermeladas naturales, libres de aditivos e ingredientes artificiales"} />}/>
 
 
-       <h1 className='titulo'>{}</h1>
-
       
-      <ItemCount stock={5} agregarAlCarrito={agregarAlCarrito} />
-          <Titulo />
 
           </Routes>
     </BrowserRouter>
@@ -41,3 +37,8 @@ const agregarAlCarrito = (count) => {
 }
 
 export default App
+/*<h1 className='titulo'>{}</h1>
+
+      
+<ItemCount stock={5} agregarAlCarrito={agregarAlCarrito} />
+    <Titulo /> */
